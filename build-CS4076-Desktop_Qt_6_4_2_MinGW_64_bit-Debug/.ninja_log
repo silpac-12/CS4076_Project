@@ -1,0 +1,15 @@
+# ninja log v5
+3	1889	7000823988077625	CS4076_autogen/timestamp	1e2331c5b363bf82
+3	1889	7000823988077625	CS4076_autogen/mocs_compilation.cpp	1e2331c5b363bf82
+3	1889	7000823988077625	C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CS4076_autogen/timestamp	1e2331c5b363bf82
+3	1889	7000823988077625	C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CS4076_autogen/mocs_compilation.cpp	1e2331c5b363bf82
+1890	5866	7000824032095860	CMakeFiles/CS4076.dir/CS4076_autogen/mocs_compilation.cpp.obj	3c128a531c2ca157
+1904	5964	7000824032996460	CMakeFiles/CS4076.dir/main.cpp.obj	a71a678ebd135d91
+1896	5970	7000824033169410	CMakeFiles/CS4076.dir/mainwindow.cpp.obj	f2da4188e3fef6c2
+5971	6631	7000824039380273	CS4076.exe	d605127cd9148898
+68	1093	7000826260138755	CS4076_autogen/timestamp	1e2331c5b363bf82
+68	1093	7000826260138755	CS4076_autogen/mocs_compilation.cpp	1e2331c5b363bf82
+68	1093	7000826260138755	C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CS4076_autogen/timestamp	1e2331c5b363bf82
+68	1093	7000826260138755	C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CS4076_autogen/mocs_compilation.cpp	1e2331c5b363bf82
+1111	4796	7000826297059503	CMakeFiles/CS4076.dir/mainwindow.cpp.obj	f2da4188e3fef6c2
+4800	5225	7000826301197939	CS4076.exe	d605127cd9148898

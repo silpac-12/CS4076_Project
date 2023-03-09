@@ -1,0 +1,9 @@
+C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CMakeFiles/CS4076.dir
+C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CMakeFiles/CS4076_autogen_timestamp_deps.dir
+C:/Users/seanc/OneDrive/Desktop/C++_Project/build-CS4076-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CMakeFiles/CS4076_autogen.dir
