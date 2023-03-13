@@ -41,50 +41,50 @@ public:
         centralwidget->setObjectName("centralwidget");
         gridLayoutWidget = new QWidget(centralwidget);
         gridLayoutWidget->setObjectName("gridLayoutWidget");
-        gridLayoutWidget->setGeometry(QRect(30, 10, 160, 80));
+        gridLayoutWidget->setGeometry(QRect(10, 10, 261, 80));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(10, 100, 80, 18));
+        pushButton->setGeometry(QRect(10, 90, 81, 21));
         pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color:#C0C0C0;\n"
-"	broder: 1px solid grey;\n"
+"	border: 1px solid grey;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"	background-color:#C0C0C0;\n"
-"	broder: 1px solid grey;\n"
+"	background-color:#A9A9A9;\n"
+"	border: 1px solid grey;\n"
 "	padding: 5px;\n"
 "}"));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(100, 100, 80, 18));
+        pushButton_2->setGeometry(QRect(99, 90, 81, 21));
         pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color:#C0C0C0;\n"
-"	broder: 1px solid grey;\n"
+"	border: 1px solid grey;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"	background-color:#C0C0C0;\n"
-"	broder: 1px solid grey;\n"
+"	background-color:#A9A9A9;\n"
+"	border: 1px solid grey;\n"
 "	padding: 5px;\n"
 "}"));
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(200, 100, 80, 18));
+        pushButton_3->setGeometry(QRect(189, 90, 81, 21));
         pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color:#C0C0C0;\n"
-"	broder: 1px solid grey;\n"
+"	border: 1px solid grey;\n"
 "	padding: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"	background-color:#C0C0C0;\n"
-"	broder: 1px solid grey;\n"
+"	background-color:#A9A9A9;\n"
+"	border: 1px solid grey;\n"
 "	padding: 5px;\n"
 "}"));
         MainWindow->setCentralWidget(centralwidget);
@@ -104,9 +104,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Add Recipie", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Show Recipie", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Edit Recipie", nullptr));
     } // retranslateUi
 
 };
