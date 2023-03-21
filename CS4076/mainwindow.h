@@ -20,6 +20,10 @@ private slots:
 
     void on_AddRecepie_clicked();
 
+    void on_pushButton_4_clicked();
+
+    void on_ShowRecepie_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -35,6 +36,7 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QPushButton *pushButton_4;
+    QListView *listView;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -119,6 +121,9 @@ public:
 "	border: 1px solid grey;\n"
 "	padding: 5px;\n"
 "}"));
+        listView = new QListView(centralwidget);
+        listView->setObjectName("listView");
+        listView->setGeometry(QRect(120, 20, 181, 111));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
