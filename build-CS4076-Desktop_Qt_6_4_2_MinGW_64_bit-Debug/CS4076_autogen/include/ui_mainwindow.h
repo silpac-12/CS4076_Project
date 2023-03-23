@@ -12,7 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -36,7 +36,9 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QPushButton *pushButton_4;
-    QListView *listView;
+    QListWidget *listWidget;
+    QTextEdit *textEdit_4;
+    QLabel *label_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -49,7 +51,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         AddRecepie = new QPushButton(centralwidget);
         AddRecepie->setObjectName("AddRecepie");
-        AddRecepie->setGeometry(QRect(10, 170, 101, 24));
+        AddRecepie->setGeometry(QRect(10, 210, 101, 24));
         AddRecepie->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color:#C0C0C0;\n"
 "	border: 1px solid grey;\n"
@@ -63,7 +65,7 @@ public:
 "}"));
         ShowRecepie = new QPushButton(centralwidget);
         ShowRecepie->setObjectName("ShowRecepie");
-        ShowRecepie->setGeometry(QRect(110, 170, 101, 24));
+        ShowRecepie->setGeometry(QRect(110, 210, 101, 24));
         ShowRecepie->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color:#C0C0C0;\n"
 "	border: 1px solid grey;\n"
@@ -77,7 +79,7 @@ public:
 "}"));
         EditRecepie = new QPushButton(centralwidget);
         EditRecepie->setObjectName("EditRecepie");
-        EditRecepie->setGeometry(QRect(210, 170, 111, 24));
+        EditRecepie->setGeometry(QRect(210, 210, 111, 24));
         EditRecepie->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color:#C0C0C0;\n"
 "	border: 1px solid grey;\n"
@@ -91,25 +93,25 @@ public:
 "}"));
         textEdit = new QTextEdit(centralwidget);
         textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(10, 30, 101, 21));
+        textEdit->setGeometry(QRect(10, 90, 101, 21));
         textEdit_2 = new QTextEdit(centralwidget);
         textEdit_2->setObjectName("textEdit_2");
-        textEdit_2->setGeometry(QRect(10, 80, 101, 21));
+        textEdit_2->setGeometry(QRect(10, 130, 101, 21));
         textEdit_3 = new QTextEdit(centralwidget);
         textEdit_3->setObjectName("textEdit_3");
-        textEdit_3->setGeometry(QRect(10, 130, 101, 31));
+        textEdit_3->setGeometry(QRect(10, 170, 101, 31));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(10, 10, 101, 16));
+        label->setGeometry(QRect(10, 70, 101, 16));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(10, 60, 101, 21));
+        label_2->setGeometry(QRect(10, 110, 101, 21));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(10, 110, 101, 21));
+        label_3->setGeometry(QRect(10, 150, 101, 21));
         pushButton_4 = new QPushButton(centralwidget);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(120, 130, 101, 31));
+        pushButton_4->setGeometry(QRect(120, 170, 101, 31));
         pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color:#C0C0C0;\n"
 "	border: 1px solid grey;\n"
@@ -121,9 +123,15 @@ public:
 "	border: 1px solid grey;\n"
 "	padding: 5px;\n"
 "}"));
-        listView = new QListView(centralwidget);
-        listView->setObjectName("listView");
-        listView->setGeometry(QRect(120, 20, 181, 111));
+        listWidget = new QListWidget(centralwidget);
+        listWidget->setObjectName("listWidget");
+        listWidget->setGeometry(QRect(120, 20, 211, 141));
+        textEdit_4 = new QTextEdit(centralwidget);
+        textEdit_4->setObjectName("textEdit_4");
+        textEdit_4->setGeometry(QRect(10, 40, 101, 21));
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(10, 10, 131, 16));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -141,13 +149,14 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        AddRecepie->setText(QCoreApplication::translate("MainWindow", "Add Recipie", nullptr));
-        ShowRecepie->setText(QCoreApplication::translate("MainWindow", "Show Recipie", nullptr));
-        EditRecepie->setText(QCoreApplication::translate("MainWindow", "Edit Recipie", nullptr));
+        AddRecepie->setText(QCoreApplication::translate("MainWindow", "Add Recipe", nullptr));
+        ShowRecepie->setText(QCoreApplication::translate("MainWindow", "Show Recipes", nullptr));
+        EditRecepie->setText(QCoreApplication::translate("MainWindow", "Delete Recipe", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Enter recepie name", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Enter calories", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Ingredients", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "Confirm recepie", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "Confirm recipe", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "Recipe type (Food / Drink)", nullptr));
     } // retranslateUi
 
 };

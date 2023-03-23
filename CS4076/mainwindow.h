@@ -24,6 +24,8 @@ private slots:
 
     void on_ShowRecepie_clicked();
 
+    void on_EditRecepie_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
