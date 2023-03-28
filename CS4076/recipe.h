@@ -10,27 +10,45 @@ class recipe
 {
 public:
 
+    QString type;
     QString name;
     QString calories;
     QString ingredients;
 
     recipe(){}
 
-    recipe(QString x, QString y, QString z){
-        this ->name = x;
-        this ->calories = y;
-        this ->ingredients =z;
+    recipe(QString t, QString x, QString y, QString z){
+       this->type = t;
+       this ->name = x;
+       this ->calories = y;
+       this ->ingredients =z;
     }
 
-    void addToArray(recipe &a){
+    virtual void addToArray(recipe a){
+
+    }
+
+    ~recipe(){
 
     }
 
 };
 
+
+
 class drink : public recipe{
 
+public:
+    drink(QString t, QString x, QString y, QString z){
+        QString type = t;
+        QString name = x;
+        QString calories = y;
+        QString ingredients = z;
+    }
 
+    virtual void addToArray(recipe &a){
+
+    }
 
 };
 
@@ -38,10 +56,15 @@ class foodDish : public recipe{
 
 public:
 
-    foodDish(QString x, QString y, QString z){
+    foodDish(QString t, QString x, QString y, QString z){
+        QString type = t;
         QString name = x;
         QString calories = y;
         QString ingredients = z;
+    }
+
+    virtual void addToArray(recipe &a){
+
     }
 };
 #endif // RECIPE_H

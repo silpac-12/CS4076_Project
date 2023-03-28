@@ -1,8 +1,14 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "recipe.h"
+#include "recipearray.h"
 #include <iostream>
+
+//recipeArray *arr = new recipeArray();
+
+vector<QString> recipeList;
 using namespace std;
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -10,6 +16,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 {
     ui->setupUi(this);
+
+
+    recipeArray *arr;
 
     //Hidden Widgets
     //Add recipe lables
@@ -63,6 +72,7 @@ void MainWindow::on_AddRecepie_clicked()
 
 void MainWindow::on_pushButton_4_clicked()
 {
+
     QString name;
     QString calories;
     QString ingredients;
@@ -78,13 +88,21 @@ void MainWindow::on_pushButton_4_clicked()
     ui -> textEdit_3 ->clear();
     ui -> textEdit_4 ->clear();
 
-    recipe * a = new recipe(name, calories, ingredients);
+    recipe * a = new recipe(type, name, calories, ingredients);
 
-    if(type == "food"){
-        a = new foodDish(name, calories, ingredients);
+    if(type == "drink" || type == "Drink"){
+        drink * d = new drink(type, name, calories, ingredients);
+        ui -> listWidget -> addItem("Drink , " + a->name + ", " + a->calories + ", " + a->ingredients);
+
+    }
+    if(type == "food" || type == "Food"){
+        foodDish * f = new foodDish(type, name, calories, ingredients);
+        ui -> listWidget -> addItem("Food , " + a->name + ", " + a->calories + ", " + a->ingredients);
+
     }
 
-    ui -> listWidget -> addItem(a->name + ", " + a->calories + ", " + a->ingredients);
+   // ui -> listWidget -> addItem(a->type + ", " + a->name + ", " + a->calories + ", " + a->ingredients);
+
 }
 
 void MainWindow::on_ShowRecepie_clicked()
@@ -114,6 +132,8 @@ void MainWindow::on_EditRecepie_clicked()
 {
     QListWidgetItem * itm = ui -> listWidget -> currentItem();
     itm ->setText("");
+
+
 
 }
 
