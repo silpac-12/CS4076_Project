@@ -3,8 +3,12 @@
 #include <string>
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <vector>
 #include <iostream>
+#define vectorSpace 50
 using namespace std;
+
+
 
 class recipe
 {
@@ -15,7 +19,9 @@ public:
     QString calories;
     QString ingredients;
 
-    recipe(){}
+    recipe(){
+
+    }
 
     recipe(QString t, QString x, QString y, QString z){
        this->type = t;
@@ -24,14 +30,15 @@ public:
        this ->ingredients =z;
     }
 
-    virtual void addToArray(recipe a){
-
+    virtual void addToArray(recipe &a){
+        recipeList.push_back(a.type + ", " + a.name + ", " + a.calories + ", " + a.ingredients);
     }
 
     ~recipe(){
 
     }
-
+private:
+    vector <QString> recipeList;
 };
 
 
@@ -46,10 +53,11 @@ public:
         QString ingredients = z;
     }
 
-    virtual void addToArray(recipe &a){
-
+    virtual void addToArray(recipe a){
+        drinkList.push_back(a.type + ", " + a.name + ", " + a.calories + ", " + a.ingredients);
     }
-
+private:
+    vector <QString> drinkList;
 };
 
 class foodDish : public recipe{
@@ -63,8 +71,10 @@ public:
         QString ingredients = z;
     }
 
-    virtual void addToArray(recipe &a){
-
+    virtual void addToArray(recipe a){
+        foodList.push_back(a.type + ", " + a.name + ", " + a.calories + ", " + a.ingredients);
     }
+private:
+    vector <QString> foodList;
 };
 #endif // RECIPE_H
