@@ -2,6 +2,8 @@
 #include "./ui_mainwindow.h"
 #include "recipe.h"
 #include <iostream>
+
+bool vegan = true;
 using namespace std;
 
 
@@ -11,9 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 {
     ui->setupUi(this);
-
-
-
 
     //Hidden Widgets
     //Add recipe lables
@@ -72,30 +71,45 @@ void MainWindow::on_pushButton_4_clicked()
     QString calories;
     QString ingredients;
     QString type;
+    bool vegan = false;
 
     name = ui -> textEdit -> toPlainText();
     calories = ui -> textEdit_2 -> toPlainText();
     ingredients = ui -> textEdit_3 -> toPlainText();
     type = ui -> textEdit_4 -> toPlainText();
 
+
     ui -> textEdit ->clear();
     ui -> textEdit_2 ->clear();
     ui -> textEdit_3 ->clear();
     ui -> textEdit_4 ->clear();
 
-    recipe * a = new recipe(type, name, calories, ingredients);
+    recipe * a = new recipe(type, name, calories, ingredients, vegan);
 
-    if(type == "drink" || type == "Drink"){
-        drink * d = new drink(type, name, calories, ingredients);
+    if((type == "drink" || type == "Drink") && vegan == true){
+        drink * d = new drink(type, name, calories, ingredients, vegan);
+        ui -> listWidget -> addItem("Drink , " + a->name + ", " + a->calories + ", " + a->ingredients + ", Vegan");
+        d->addToArray(*a);
+        *d;
+    }else if((type == "drink" || type == "Drink") && vegan == false){
+        drink * d = new drink(type, name, calories, ingredients, vegan);
         ui -> listWidget -> addItem("Drink , " + a->name + ", " + a->calories + ", " + a->ingredients);
         d->addToArray(*a);
         *d;
     }
-    if(type == "food" || type == "Food"){
-        foodDish * f = new foodDish(type, name, calories, ingredients);
+    if((type == "food" || type == "Food") && vegan == true){
+        foodDish * f = new foodDish(type, name, calories, ingredients, vegan);
+        ui -> listWidget -> addItem("Food , " + a->name + ", " + a->calories + ", " + a->ingredients + ", Vegan");
+        f->addToArray(*a);
+        *f;
+    }else if((type == "food" || type == "Food") && vegan == false){
+        foodDish * f = new foodDish(type, name, calories, ingredients, vegan);
         ui -> listWidget -> addItem("Food , " + a->name + ", " + a->calories + ", " + a->ingredients);
         f->addToArray(*a);
         *f;
+    }
+    else{
+        cout << "Invalid Input";
     }
 }
 
@@ -126,9 +140,6 @@ void MainWindow::on_EditRecepie_clicked()
 {
     QListWidgetItem * itm = ui -> listWidget -> currentItem();
     itm ->setText("");
-
-
-
 }
 
 

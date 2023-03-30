@@ -26,6 +26,10 @@ private slots:
 
     void on_EditRecepie_clicked();
 
+    void on_checkBox_stateChanged(int arg1);
+
+    void on_checkBox_clicked(bool checked);
+
 private:
     Ui::MainWindow *ui;
 };

@@ -131,7 +131,7 @@ public:
         textEdit_4->setGeometry(QRect(10, 40, 101, 21));
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(10, 10, 131, 16));
+        label_4->setGeometry(QRect(10, 10, 141, 16));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
